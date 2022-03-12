@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 16812344}
   - component: {fileID: 16812343}
   - component: {fileID: 16812342}
-  - component: {fileID: 16812341}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -144,19 +143,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &16812341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 16812340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a48de7d7625324176a38aa3fb9cc0999, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tiltForce: 20
 --- !u!54 &16812342
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -437,6 +423,7 @@ GameObject:
   - component: {fileID: 1319690241}
   - component: {fileID: 1319690240}
   - component: {fileID: 1319690239}
+  - component: {fileID: 1319690243}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -521,3 +508,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1319690243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1319690238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a48de7d7625324176a38aa3fb9cc0999, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tiltForce: 5

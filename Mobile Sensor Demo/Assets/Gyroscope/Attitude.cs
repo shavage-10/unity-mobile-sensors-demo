@@ -6,15 +6,24 @@ using UnityEngine;
 public class Attitude : MonoBehaviour
 {
 
-    Gyroscope gyro;
-
     private void Start() {
-        gyro = Input.gyro;
-        gyro.enabled = true;
+        if (SystemInfo.supportsGyroscope)
+        {
+            Input.gyro.enabled = true;
+        }
     }
     
 
     private void Update() {
-        gameObject.transform.rotation = gyro.attitude;
+        
+        if (SystemInfo.supportsGyroscope)
+        {
+            transform.rotation = GyroAxisConvert(Input.gyro.attitude);
+        }
+    }
+
+    private Quaternion GyroAxisConvert(Quaternion q)
+    {
+        return new Quaternion(q.x, q.z, q.y, -q.w);
     }
 }

@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Gyroscope/Gyroscope.unity
+    guid: 0e40aca3d4d4e4283937d35e9bd73017
   m_configObjects: {}
