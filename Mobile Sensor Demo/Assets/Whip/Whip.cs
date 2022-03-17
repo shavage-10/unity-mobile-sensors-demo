@@ -10,13 +10,6 @@ public class Whip : MonoBehaviour
     public TMPro.TMP_Text text;
     private bool trigger = false;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (Input.acceleration.magnitude > thresh) {
@@ -28,6 +21,6 @@ public class Whip : MonoBehaviour
             trigger = false;
         }
         if(text)
-            text.text = Input.acceleration.ToString();
+            text.text = "Acceleration " + Input.acceleration.ToString();
     }
 }
